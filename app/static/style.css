@@ -48,7 +48,9 @@ body {
 .result-label {
     margin-top: 0.5em;
     padding: 10px;
-    font-size: 13px;
+    font-size: 30px;
+    font-family: 'Permanent Marker', Arial, sans-serif;
+    font-weight: 700;
 }
 
 button.choose-file-button {
