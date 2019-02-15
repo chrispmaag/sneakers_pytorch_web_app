@@ -9,11 +9,13 @@ from io import BytesIO
 from fastai.vision import *
 
 # original: export_file_url = 'https://www.dropbox.com/s/v6cuuvddq73d1e0/export.pkl?raw=1'
-export_file_url = 'https://drive.google.com/uc?authuser=0&id=1Xhgu7fdXbECOesgxbEuXJ-rasEITYUij&export=download'
+export_file_url = 'https://drive.google.com/uc?authuser=0&id=1W2wmyDU77QrZjBWyzTDSCYhbHBfbPSQu&export=download'
 export_file_name = 'export.pkl'
 
 # classes = ['black', 'grizzly', 'teddys']
-classes = ['air_jordan_1','air_jordan_2','air_jordan_3','air_jordan_4','air_jordan_5']
+classes = ['air_jordan_1','air_jordan_2','air_jordan_3','air_jordan_4','air_jordan_5',
+           'air_jordan_6','air_jordan_7','air_jordan_8','air_jordan_9','air_jordan_10',
+           'air_jordan_11','air_jordan_12','air_jordan_13']
 path = Path(__file__).parent
 
 app = Starlette()
