@@ -20,35 +20,35 @@ body {
     padding-left:50px;
     padding-right:50px;
     text-align: center;
-    font-size: 14px;
+    font-size: 20px;
 }
 
 .title {
     font-size: 30px;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     color: #262626;
     font-family: 'Permanent Marker', Arial, sans-serif;
     font-weight: 700;
 }
 
 .content {
-    margin-top: 10em;
+    margin-top: 2em;
 }
 
 .analyze {
-    margin-top: 5em;
+    margin-top: 2em;
 }
 
 .upload-label {
     padding: 10px;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .result-label {
     margin-top: 0.5em;
     padding: 10px;
-    font-size: 30px;
+    font-size: 20px;
     font-family: 'Permanent Marker', Arial, sans-serif;
     font-weight: 700;
 }
@@ -56,10 +56,10 @@ body {
 button.choose-file-button {
   width: 200px;
   height: 40px;
-  border-radius: 2px;
+  border-radius: 16px;
   background-color: #ffffff;
   border: solid 1px #7052CB;
-  font-size: 13px;
+  font-size: 16px;
   color: #7052CB;
 }
 
@@ -67,9 +67,9 @@ button.analyze-button {
     width: 200px;
     height: 40px;
     border: solid 1px #7052CB;
-    border-radius: 2px;
+    border-radius: 16px;
     background-color: #7052CB;
-    font-size: 13px;
+    font-size: 16px;
     color: #ffffff;
 }
 
