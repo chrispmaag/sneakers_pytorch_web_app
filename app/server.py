@@ -67,6 +67,9 @@ async def analyze(request):
     # convert probs to numpy array because I just want the numbers by themselves without 'tensor'
     top_3_pred_probs = top_3_pred_probs.numpy()
 
+    # NEWEST LINE: now round the prediction probabilities from long floats to 2 decimal places
+    top_3_pred_probs = [round(i, 2) for i in top_3_pred_probs]
+
     # grab the indices so I can use them to lookup the correct value from learn.data.classes
     top_3_pred_class_idxs = pred_result[1][:3]
 
