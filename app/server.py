@@ -4,18 +4,15 @@ from starlette.staticfiles import StaticFiles
 from starlette.middleware.cors import CORSMiddleware
 import uvicorn, aiohttp, asyncio
 from io import BytesIO
-
-# from fastai import *
 from fastai.vision import *
 
-# original: export_file_url = 'https://www.dropbox.com/s/v6cuuvddq73d1e0/export.pkl?raw=1'
 export_file_url = 'https://drive.google.com/uc?authuser=0&id=1W2wmyDU77QrZjBWyzTDSCYhbHBfbPSQu&export=download'
 export_file_name = 'export.pkl'
 
-# classes = ['black', 'grizzly', 'teddys']
 classes = ['air_jordan_1','air_jordan_2','air_jordan_3','air_jordan_4','air_jordan_5',
            'air_jordan_6','air_jordan_7','air_jordan_8','air_jordan_9','air_jordan_10',
            'air_jordan_11','air_jordan_12','air_jordan_13']
+
 path = Path(__file__).parent
 
 app = Starlette()
@@ -57,8 +54,11 @@ async def analyze(request):
     data = await request.form()
     img_bytes = await (data['file'].read())
     img = open_image(BytesIO(img_bytes))
-    prediction = learn.predict(img)[0]
-    return JSONResponse({'result': str(prediction)})
+    # prediction = learn.predict(img)[0]
+    _,_,losses = learn.predict(img)
+    predictions = sorted(zip(classes, map(float, losses)), key=lambda p: p[1], reverse=True)
+    # return JSONResponse({'result': str(prediction)})
+    return JSONResponse({'result': str(predictions[0:3])})
 
 if __name__ == '__main__':
     if 'serve' in sys.argv: uvicorn.run(app=app, host='0.0.0.0', port=5042)
