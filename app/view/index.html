@@ -1,20 +1,32 @@
 <html lang='en'>
 <head>
     <meta charset='utf-8'>
+    <title>What Sneaker Is That?</title>
     <link rel='stylesheet' href='../static/style.css'>
     <script src='../static/client.js'></script>
 </head>
 <body>
 <div>
     <div class='center'>
-        <div class='title'>WHAT JORDAN IS THAT?</div>
+        <div class='title'>WHAT SNEAKER IS THAT?</div>
         <p>
-            Upload a photo of a Jordan retro (currently Air Jordan 1-13) by clicking below, and we'll tell you what model it is!
+            Upload a photo of a Jordan by clicking below, and we'll tell you what model it is!
+            It currently classifies 13 Air Jordan models (1-13).
+        </p>
+        <div>
+          <!-- <img src="updated_grid.png" alt="Shoes Training Dataset" style="width:400px;height:266px;border:0;">  -->
+          <img src="https://drive.google.com/uc?id=1EyFNpJe2q1CWO3bAZhH6CKQBLJWmC6eZ" alt="Shoes Training Dataset" style="width:400px;height:266px;border:0;">
+          <!-- <img src="https://c.static-nike.com/a/images/t_PDP_1280_v1/f_auto/iiipva134zgtgkmuwszb/air-jordan-5-retro-mens-shoe-df9lGp.jpg" alt="Shoes Training Dataset" style="width:300px;height:300px;border:0;"> -->
+        </div>
+        <p>
+            The model is trained on ~2k total images and achieves 93% accuracy on the validation set,
+            though the dataset has some duplicates from the image collection process,
+            so this percentage is on the optimistic side.
         </p>
         <p>
             Made by Chris Pontarolo-Maag
             <a href="https://github.com/chrispmaag">
-              <img src="github_logo.png" alt="GitHub" style="width:20px;height:20px;border:0;">
+              <img class='github' src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" style="width:25px;height:25px;border:0;vertical-align:middle;">
             </a>
         </p>
         <div class='content'>
