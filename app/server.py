@@ -6,12 +6,15 @@ import uvicorn, aiohttp, asyncio
 from io import BytesIO
 from fastai.vision import *
 
-export_file_url = 'https://drive.google.com/uc?authuser=0&id=1W2wmyDU77QrZjBWyzTDSCYhbHBfbPSQu&export=download'
+# Resnet 50 model
+export_file_url = 'https://drive.google.com/uc?authuser=0&id=1ZwEstw1CLU2-v2h30_n9ylcJjqCcME-s&export=download'
 export_file_name = 'export.pkl'
 
-classes = ['air_jordan_1','air_jordan_2','air_jordan_3','air_jordan_4','air_jordan_5',
-           'air_jordan_6','air_jordan_7','air_jordan_8','air_jordan_9','air_jordan_10',
-           'air_jordan_11','air_jordan_12','air_jordan_13']
+classes = ['air_jordan_1', 'air_jordan_2', 'air_jordan_3', 'air_jordan_4', 'air_jordan_5',
+           'air_jordan_6', 'air_jordan_7', 'air_jordan_8', 'air_jordan_9', 'air_jordan_10',
+           'air_jordan_11', 'air_jordan_12', 'air_jordan_13', 'air_jordan_14', 'air_jordan_15',
+           'air_max_1', 'air_max_90', 'air_max_95', 'air_max_97', 'air_max_270', 'epic_react',
+           'foamposite', 'pegasus_35', 'vapormax']
 
 path = Path(__file__).parent
 
