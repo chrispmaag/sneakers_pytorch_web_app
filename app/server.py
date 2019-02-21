@@ -57,23 +57,19 @@ async def analyze(request):
     data = await request.form()
     img_bytes = await (data['file'].read())
     img = open_image(BytesIO(img_bytes))
-    # prediction = learn.predict(img)[0]
 
-    # these give me a top 3 but sorted in the wrong order, I think because predictions
-    # classes print in different order, so try another approach
-    # _,_,losses = learn.predict(img)
-    # predictions = sorted(zip(classes, map(float, losses)), key=lambda p: p[1], reverse=True)
-    # this gives me the losses in descending order
+    # If I just want the class prediction: prediction = learn.predict(img)[0]
+    # This gives me the losses in descending order
     pred_result = learn.predict(img)[2].sort(descending=True)
     top_3_pred_probs = pred_result[0][:3]
 
-    # convert probs to numpy array because I just want the numbers by themselves without 'tensor'
+    # Convert probs to numpy array because I just want the numbers by themselves without 'tensor'
     top_3_pred_probs = top_3_pred_probs.numpy()
 
-    # NEWEST LINE: now round the prediction probabilities from long floats to 2 decimal places
+    # Round the prediction probabilities from long floats to 2 decimal places
     top_3_pred_probs = [round(i, 2) for i in top_3_pred_probs]
 
-    # grab the indices so I can use them to lookup the correct value from learn.data.classes
+    # Grab the indices so I can use them to lookup the correct value from learn.data.classes
     top_3_pred_class_idxs = pred_result[1][:3]
 
     # Convert label from 'air_jordan_3' to 'Air Jordan 3' after looking up proper index
@@ -81,7 +77,6 @@ async def analyze(request):
 
     predictions = list(zip(top_3_pred_classes, top_3_pred_probs))
 
-    # return JSONResponse({'result': str(prediction)})
     return JSONResponse({'result': str(predictions)})
 
 if __name__ == '__main__':
