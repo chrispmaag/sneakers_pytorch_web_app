@@ -33,7 +33,7 @@ The three main files are:
 
 ## Results
 
-### How well did ResNet50 do on 24 classes of sneakers?
+### How well did resnet50 do on 24 classes of sneakers?
 
 ![Confusion Matrix](images/confusion_matrix.png "Confusion Matrix")
 
