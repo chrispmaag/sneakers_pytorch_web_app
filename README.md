@@ -1,7 +1,7 @@
 # What Sneaker is That? Creating a Sneakers Classifier
 ## How to build a custom dataset, train a deep neural network, and deploy a web app
 
-![What Sneaker Web App](images/what_sneakers_sample.png "What Sneaker Web App")
+![What Sneaker Web App](images/what_sneaker_sample.png "What Sneaker Web App")
 
 You can try out the app at https://what-sneaker.onrender.com/.
 A Medium post summarizing the steps can be found at https://medium.com/@chrispmaag/creating-a-sneakers-classifier-541682faf061.
