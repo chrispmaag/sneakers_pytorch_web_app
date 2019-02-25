@@ -6,6 +6,8 @@
 You can try out the app at https://what-sneaker.onrender.com/.
 A Medium post summarizing the steps can be found at https://medium.com/@chrispmaag/creating-a-sneakers-classifier-541682faf061.
 
+## Sample results from the app
+
 ![](images/sneakers_web_app_results.gif)
 
 ## Credit
